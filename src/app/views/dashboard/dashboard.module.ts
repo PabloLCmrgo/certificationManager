@@ -8,6 +8,8 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CertificationService } from '../../core/services/certification.service';
+import { NgSelect2Module } from 'ng-select2';
+import { DataService } from '../../core/mocks/select2Data.service';
 
 //nnSelect2
 
@@ -18,9 +20,10 @@ import { CertificationService } from '../../core/services/certification.service'
     ChartsModule,
     BsDropdownModule,
     ButtonsModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    NgSelect2Module
   ],
   declarations: [ DashboardComponent ],
-  providers:[CertificationService]
+  providers:[CertificationService, DataService]
 })
 export class DashboardModule { }
