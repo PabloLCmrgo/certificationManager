@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-2">
+    <span>Periodo de certificación</span>
+    <ng-select2 [data]="this.periodo"
+                [formControl]="periodoForm"
+                placeholder
+                [width]="130">
+    </ng-select2>
+  </div>
+  <div class="col-md-2">
+    <span>Periodo de aprobación</span>
+    <ng-select2 [data]="this.contrato_marco" [formControl]="contrato_marcoForm" [placeholder]="placeholder" [width]="150">
+    </ng-select2>
+  </div>
+  <div class="col-md-2">
+    <span>Proveedor</span>
+    <ng-select2 [data]="this.imputacion" [formControl]="imputacioneForm" [placeholder]="placeholder" [width]="130">
+    </ng-select2>
+  </div>
+  <div class="col-md-2">
+    <span>Imputación</span>
+    <ng-select2 [data]="this.imputacion" [formControl]="imputacioneForm" [placeholder]="placeholder" [width]="130">
+    </ng-select2>
+  </div>
+  <div class="col-md-2">
+    <span>Solicitud</span>
+    <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="130" [(ngModel)]="value">
+    </ng-select2>
+  </div>
+  <div class="col-md-2">
+    <span>Pedido</span>
+    <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="130" [(ngModel)]="value">
+    </ng-select2>
+  </div>
+  <!--<div class="col-md-2">
+    <span>Estado</span>
+    <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="120" [(ngModel)]="value">
+    </ng-select2>
+  </div>-->
+  <div class="col-md-12 mt-3">
+    <button type="button" class="btn btn-outline-warning">Limpiar</button>
+    <button type="button" class="btn btn-warning">Buscar</button>
+    <button type="button" (click)="openDialog()" class="btn btn-warning">Certificar</button>
+  </div>
+  <div class="col-md-12 mt-2 border-bottom">
+  </div>
+</div>

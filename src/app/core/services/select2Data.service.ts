@@ -23,14 +23,6 @@ export interface ResponseStatus {
 }
 @Injectable()
 export class DataService {
-  options: {
-    headers?: HttpHeaders | { [header: string]: string | string[] },
-    observe?: 'body' | 'events' | 'response',
-    params?: HttpParams | { [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean> },
-    reportProgress?: boolean,
-    responseType?: 'arraybuffer' | 'blob' | 'json' | 'text',
-    withCredentials?: boolean,
-  }
   constructor(private http: HttpClient) { }
   getDynamicList(): Observable<Array<Select2OptionData>> {
     return Observable.create((obs) => {

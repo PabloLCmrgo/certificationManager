@@ -45,6 +45,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { NgSelect2Module } from 'ng-select2';
 
+
+
 @NgModule({
   imports: [
     BrowserModule,

@@ -12,36 +12,7 @@
     </div>
     <div class="card-body ">
       <div class="row">
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-2">
-          <ng-select2 [data]="exampleData" [placeholder]="placeholder" [width]="150" [(ngModel)]="value">
-          </ng-select2>
-        </div>
-        <div class="col-md-12 mt-3">
-          <button type="button" class="btn btn-outline-warning">Limpiar</button>
-          <button type="button" class="btn btn-warning">Buscar</button>
-        </div>
-        <div class="col-md-12 mt-2 border-bottom">
-        </div>
+        <app-select2-view></app-select2-view>
         <div class="col-md-12 mt-5 mb-5">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -50,11 +21,11 @@
             </label>
           </div>
         </div>
-        <div class="row" *ngFor="let dt of data">
+        <div class="row" *ngFor="let dt of this.certificationsData">
           <div class="card cardDetails">
             <div class="mt-3 d-flex justify-content-center">
-              <div class="w-10">
-                <span class="form-check ml-4 mt-3">
+              <div class="mr-3">
+                <span class="form-check ml-2 mt-3">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 </span>
               </div>
@@ -63,36 +34,33 @@
                 </span>
                 <span class="font-weight-bolder mr-1 text-warning">{{dt.tipo_imputacion}}</span>
               </div>
-              <div class="w-10">
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
+              <div class="w-15">
+                <span class="font-weight-bolder p-1">proovedor:</span><span class="p-1">ipsum</span>
+                <span class="font-weight-bolder p-1">imputación:</span><span class="p-1">ipsum</span>
+                <span class="font-weight-bolder p-1">Especialidad:</span><span class="p-1">ipsum</span>
               </div>
-              <div class="w-10">
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
+              <div class="w-25">
+                <span class="font-weight-bolder p-1">CM:</span><span class="p-1">{{dt.codigo_contrato_marco}}</span><span class="font-weight-bolder p-1">Pos</span><span class="p-1">0</span><span class="font-weight-bolder p-1">SubPos</span><span class="p-1">10</span>
+                <span class="font-weight-bolder p-1">Solicitud:</span><span class="p-1">ipsum</span>
+                <span class="font-weight-bolder p-1">Tipo elaborado:</span><span class="p-1">ipsum</span>
               </div>
-              <div class="w-10">
-                <span class="font-weight-bolder mr-1">lorem:</span><span class="mr-1">ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
+              <div class="w-25">
+                <span class="font-weight-bolder p-1">NP:</span><span class="p-1">ipsum</span><span class="font-weight-bolder p-1">Pos</span><span class="p-1">0</span><span class="font-weight-bolder p-1">SubPos</span><span class="p-1">10</span>
+                <span class="font-weight-bolder p-1">Pedido:</span><span class="p-1">ipsum</span>
+                <span class="font-weight-bolder p-1">Plano:</span><span class="p-1">ipsum</span>
               </div>
-              <div class="w-10">
+              <!--<div class="w-10">
                 <span class="font-weight-bolder text-danger">lorem:</span><span class="text-danger">ipsum</span>
               </div>
               <div class="w-10">
                 <span class="font-weight-bolder text-danger">lorem:</span><span class="text-danger">ipsum</span>
                 <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
                 <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-              </div>
-              <div class="w-10">
-                <span class="font-weight-bolder">lorem:</span><span class="text-danger">ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span><span>ipsum</span>
-                <span class="font-weight-bolder mr-1">lorem:</span>
+              </div>-->
+              <div class="w-15">
+                <span class="font-weight-bolder">Periodo de aprobación:</span><span class="text-danger">ipsum</span>
+                <span class="font-weight-bolder mr-1">Periodo de certificación:</span><span>ipsum</span>
+                <span class="font-weight-bolder mr-1">HES:</span>
               </div>
               <div class="w-10 t-center d-grid">
                 <span class="f-size mr-1">0</span>

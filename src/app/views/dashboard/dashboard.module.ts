@@ -9,8 +9,11 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CertificationService } from '../../core/services/certification.service';
 import { NgSelect2Module } from 'ng-select2';
-import { DataService } from '../../core/mocks/select2Data.service';
+import { DataService } from '../../core/services/select2Data.service';
 import { CommonModule } from '@angular/common';
+
+//temp CertificationModule
+import { CertificationModule } from '../../home/pages/certification/certification.module';
 
 //nnSelect2
 
@@ -23,6 +26,7 @@ import { CommonModule } from '@angular/common';
     ButtonsModule.forRoot(),
     HttpClientModule,
     NgSelect2Module,
+    CertificationModule, //temp
 CommonModule
   ],
   declarations: [ DashboardComponent ],
