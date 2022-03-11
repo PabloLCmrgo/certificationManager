@@ -1,10 +1,37 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, retry } from 'rxjs/operators';
+import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
 
+
+
+export interface ApiResponse<T = void, U = void> {
+  status: ResponseStatus;
+  message: string;
+  result?: T;
+  meta?: U;
+}
+
+export interface ResponseStatus {
+  Success: 'Success',
+  Unauthorized: 'Unauthorized',
+  ValidationError: 'ValidationError',
+  BizFailure: 'BizFailure',
+  Failure: 'Failure'
+}
 @Injectable()
 export class DataService {
-
+  options: {
+    headers?: HttpHeaders | { [header: string]: string | string[] },
+    observe?: 'body' | 'events' | 'response',
+    params?: HttpParams | { [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean> },
+    reportProgress?: boolean,
+    responseType?: 'arraybuffer' | 'blob' | 'json' | 'text',
+    withCredentials?: boolean,
+  }
+  constructor(private http: HttpClient) { }
   getDynamicList(): Observable<Array<Select2OptionData>> {
     return Observable.create((obs) => {
       obs.next([
@@ -153,5 +180,17 @@ export class DataService {
         ]
       }
     ];
+  }
+
+
+  getDataSource(id_certificacion_volumen: number): Observable<UspWebCertificacionesVolumenesPagoDetallesObtener[]> {
+    return this.http
+      .get<ApiResponse<UspWebCertificacionesVolumenesPagoDetallesObtener[]>>
+      (`https://localhost:44324/api/v1/Certificaciones?id_certificacion_volumen=${id_certificacion_volumen}`)
+      .pipe(
+        map((response: ApiResponse<UspWebCertificacionesVolumenesPagoDetallesObtener[]>) => {
+          return response.result;
+        })
+      );
   }
 }

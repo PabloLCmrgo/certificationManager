@@ -3,6 +3,7 @@ import { CertificationService } from '../../core/services/certification.service'
 
 import { DataService } from '../../core/mocks/select2Data.service';
 import { Select2OptionData } from 'ng-select2';
+import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
 
 @Component({
   templateUrl: 'dashboard.component.html',
@@ -10,7 +11,7 @@ import { Select2OptionData } from 'ng-select2';
 })
 export class DashboardComponent implements OnInit {
   public exampleData: Array<Select2OptionData>;
-
+  public data: UspWebCertificacionesVolumenesPagoDetallesObtener[];
   private _value: string;
   get value(): string {
     return this._value;
@@ -27,6 +28,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     console.log(this._certification.getCertificationInfo());
     this.exampleData = this.service.getChangeList();
+    this.service.getDataSource(1).subscribe(x => {
+      this.data = x;
+      console.log(this.data);
+
+    });
   }
 
   public changeValue() {

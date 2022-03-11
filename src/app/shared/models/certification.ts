@@ -34,3 +34,24 @@ export interface Icertification {
     id_posicion:number;
     id_subposicion:number;
 }
+
+export interface UspWebCertificacionesVolumenesPagoDetallesObtener {
+    id: number;
+    id_periodo: number;
+    periodo: string;
+    codigo_contrato_marco: number;
+    contrato_marco: string;
+    id_posicion: number;
+    id_subposicion: number;
+    id_imputaicon: number;
+    codigo_imputacion: string;
+    imputacion: string;
+    id_tipo_imputacion: number;
+    codigo_tipo_imputacion: string;
+    tipo_imputacion: string;
+    id_voz_gasto: number;
+    codigo_voz_gasto: string;
+    voz_gasto: string;
+    cantidad_volumen: number;
+    observacion: string;
+}
