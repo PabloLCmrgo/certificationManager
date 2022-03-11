@@ -10,6 +10,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { CertificationService } from '../../core/services/certification.service';
 import { NgSelect2Module } from 'ng-select2';
 import { DataService } from '../../core/mocks/select2Data.service';
+import { CommonModule } from '@angular/common';
 
 //nnSelect2
 
@@ -21,7 +22,8 @@ import { DataService } from '../../core/mocks/select2Data.service';
     BsDropdownModule,
     ButtonsModule.forRoot(),
     HttpClientModule,
-    NgSelect2Module
+    NgSelect2Module,
+CommonModule
   ],
   declarations: [ DashboardComponent ],
   providers:[CertificationService, DataService]
