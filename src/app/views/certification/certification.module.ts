@@ -8,9 +8,12 @@ import { NgSelect2Module } from 'ng-select2';
 import { MatDialogModule } from '@angular/material/dialog';
 
 import { CertificationComponent } from './certification.component';
-import { Select2ViewComponent } from './select2-view/select2-view.component';
-import { DataService } from '../../../core/services/select2Data.service';
-import { CertificationService } from '../../../core/services/certification.service';
+import { Select2ViewComponent } from '../../home/pages/certification/select2-view/select2-view.component';
+import { DialogCertification } from '../../home/pages/certification/dialog-certification/dialog-certification';
+import { DetailsCardComponent } from '../../home/pages/certification/details-card/details-card.component';
+
+import { DataService } from '../../core/services/select2Data.service';
+import { CertificationService } from '../../core/services/certification.service';
 
 
 
@@ -18,6 +21,8 @@ import { CertificationService } from '../../../core/services/certification.servi
   declarations: [
     CertificationComponent,
     Select2ViewComponent,
+    DialogCertification,
+    DetailsCardComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +33,8 @@ import { CertificationService } from '../../../core/services/certification.servi
     ReactiveFormsModule
 
   ], exports: [
-    Select2ViewComponent
+    Select2ViewComponent,
+    DetailsCardComponent
   ], providers: [
     CertificationService,
     DataService

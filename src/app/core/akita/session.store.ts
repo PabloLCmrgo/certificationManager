@@ -6,12 +6,22 @@ import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/
 export interface CertificationState {
   certifications: UspWebCertificacionesVolumenesPagoDetallesObtener[];
   isLoaded: boolean;
+  checkedCategoryList: SelectedIds[];
+  uncheckedCategoryList: SelectedIds[];
+
+}
+
+export interface SelectedIds {
+  id: number
+
 }
 
 export const getInitialState = () => {
   return {
     certificationData: [],
-    isLoaded: false
+    isLoaded: false,
+    checkedCategoryList: [],
+    uncheckCategoryList: []
   };
 }
 

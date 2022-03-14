@@ -9,7 +9,7 @@
   </div>
   <div class="col-md-2">
     <span>Periodo de aprobación</span>
-    <ng-select2 [data]="this.contrato_marco" [formControl]="contrato_marcoForm" [placeholder]="placeholder" [width]="150">
+    <ng-select2 class="genSelec2Color" [data]="this.contrato_marco" [formControl]="contrato_marcoForm" [placeholder]="placeholder" [width]="150">
     </ng-select2>
   </div>
   <div class="col-md-2">
@@ -39,8 +39,8 @@
   </div>-->
   <div class="col-md-12 mt-3">
     <button type="button" class="btn btn-outline-warning">Limpiar</button>
-    <button type="button" class="btn btn-warning">Buscar</button>
-    <button type="button" (click)="openDialog()" class="btn btn-warning" style="float:right !important">Certificar</button>
+    <button type="button" class="btn butonStyle">Buscar</button>
+    <button type="button" (click)="openDialog()" class="btn butonStyle mr-4" style="float:right !important">Certificar</button>
   </div>
   <div class="col-md-12 mt-2 border-bottom">
   </div>

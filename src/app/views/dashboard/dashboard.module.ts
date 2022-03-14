@@ -13,7 +13,7 @@ import { DataService } from '../../core/services/select2Data.service';
 import { CommonModule } from '@angular/common';
 
 //temp CertificationModule
-import { CertificationModule } from '../../home/pages/certification/certification.module';
+import { CertificationModule } from '../../views/certification/certification.module';
 
 //nnSelect2
 
@@ -30,6 +30,6 @@ import { CertificationModule } from '../../home/pages/certification/certificatio
 CommonModule
   ],
   declarations: [ DashboardComponent ],
-  providers:[CertificationService, DataService]
+  providers: [CertificationService, DataService]
 })
 export class DashboardModule { }

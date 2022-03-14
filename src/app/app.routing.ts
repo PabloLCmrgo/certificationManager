@@ -68,7 +68,7 @@ export const routes: Routes = [
       },
       {
         path: 'certification',
-        loadChildren: () => import('./home/pages/certification/certification.module').then(m => m.CertificationModule)
+        loadChildren: () => import('./views/certification/certification.module').then(m => m.CertificationModule)
       },
       {
         path: 'icons',

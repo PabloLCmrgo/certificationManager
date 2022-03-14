@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Select2OptionData } from 'ng-select2';
 import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { filter, map, switchMap, take } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { CertificationState, CertificationStore } from '../../../../core/akita/session.store';
+
+import { CertificationQuery } from '../../../../core/akita/query';
 import { DataService } from '../../../../core/services/select2Data.service';
 import { CertificationService } from '../../../../core/services/certification.service';
 import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../../../shared/models/certification';
-import { CertificationQuery } from '../../../../core/akita/query';
-import { CertificationState, CertificationStore } from '../../../../core/akita/session.store';
-import { filter, map, switchMap, take } from 'rxjs/operators';
-import { of } from 'rxjs';
-import { MatDialog } from '@angular/material/dialog';
-
+import '../../../../core/web-components/select2-view/select2View';
+import { DialogCertification } from '../dialog-certification/dialog-certification';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-select2-view',
@@ -98,15 +101,10 @@ export class Select2ViewComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(DialogElementsExampleDialog, {
+    this.dialog.open(DialogCertification, {
       height: '400px',
-      width: '600px',
+      width: '900px',
+      panelClass: 'dialogStyle'
     });
   }
 }
-
-@Component({
-  selector: 'dialog-elements-example-dialog',
-  templateUrl: './dialog.html',
-})
-export class DialogElementsExampleDialog { }
