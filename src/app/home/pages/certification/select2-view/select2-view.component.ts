@@ -12,7 +12,6 @@ import { CertificationService } from '../../../../core/services/certification.se
 import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../../../shared/models/certification';
 import '../../../../core/web-components/select2-view/select2View';
 import { DialogCertification } from '../dialog-certification/dialog-certification';
-import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-select2-view',
@@ -26,6 +25,8 @@ export class Select2ViewComponent implements OnInit {
   public periodo: string[];
   public contrato_marco: string[];
   public imputacion: string[];
+  checkedCategoryList: UspWebCertificacionesVolumenesPagoDetallesObtener[];
+  uncheckedCategoryList: UspWebCertificacionesVolumenesPagoDetallesObtener[];
 
   public exampleData: Array<Select2OptionData>;
   public periodoForm = new FormControl();
@@ -61,6 +62,7 @@ export class Select2ViewComponent implements OnInit {
         (res: any) => {
           console.log(res);
           this.certificationsData = res.result
+          this.getCheckedItemList();
           for (var i = 0; res.result.length > i; i++) {
             this.contrato_marco = [...this.contrato_marco, ...[res.result[i].contrato_marco]];
             this.periodo = [...this.periodo, ...[res.result[i].periodo]];
@@ -98,6 +100,24 @@ export class Select2ViewComponent implements OnInit {
         text: 'Basic 4'
       }
     ];
+  }
+
+  getCheckedItemList() {
+    this.checkedCategoryList = [];
+    this.uncheckedCategoryList = [];
+    for (var i = 0; i < this.certificationsData.length; i++) {
+      !!this.certificationsData[i].isCheck ? this.checkedCategoryList.push(this.certificationsData[i]) : this.uncheckedCategoryList.push(this.certificationsData[i]);
+    }
+    this.certificationStore.update((state): any => {
+      return {
+        checkedCategoryList: this.checkedCategoryList,
+      };
+    });
+    this.certificationStore.update((state): any => {
+      return {
+        uncheckCategoryList: this.uncheckedCategoryList,
+      };
+    });
   }
 
   openDialog() {

@@ -1,6 +1,7 @@
 {
   "result": [
     {
+      "isCheck": true,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -21,6 +22,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -41,6 +43,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -61,6 +64,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -81,6 +85,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -101,6 +106,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -121,6 +127,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -141,6 +148,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -161,6 +169,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -181,6 +190,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -201,6 +211,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -221,6 +232,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -241,6 +253,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",
@@ -261,6 +274,7 @@
       "observacion": "CERTIFICACION: Enero 2018"
     },
     {
+      "isCheck": false,
       "id": 1,
       "id_periodo": 1,
       "periodo": "Enero 2018",

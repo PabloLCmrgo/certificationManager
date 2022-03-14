@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
 
-import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
+import { SelectedIds, UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
 
 export interface CertificationState {
   certifications: UspWebCertificacionesVolumenesPagoDetallesObtener[];
   isLoaded: boolean;
   checkedCategoryList: SelectedIds[];
   uncheckedCategoryList: SelectedIds[];
-
-}
-
-export interface SelectedIds {
-  id: number
 
 }
 

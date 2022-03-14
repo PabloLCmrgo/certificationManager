@@ -15,6 +15,9 @@ export class DetailsCardComponent implements OnInit {
     this.certificationQuery.getCertificationsData().subscribe((res) => {
       res && res['result'] ? this.certificationsData = res['result'] : [];
     });
+    this.certificationQuery.getCheckedCategoryList().subscribe((res) => {
+      console.log(res);
+    });
   }
 
 }

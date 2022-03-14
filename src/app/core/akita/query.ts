@@ -3,8 +3,8 @@
 import { Injectable } from '@angular/core';
 import { Query } from '@datorama/akita';
 import { Observable, of } from 'rxjs';
-import { UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
-import { CertificationStore, CertificationState, SelectedIds } from './session.store';
+import { SelectedIds, UspWebCertificacionesVolumenesPagoDetallesObtener } from '../../shared/models/certification';
+import { CertificationStore, CertificationState } from './session.store';
 import { map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
@@ -26,9 +26,9 @@ export class CertificationQuery extends Query<CertificationState> {
     return this.selectLoading();
   }
 
-  //getCheckedCategoryList(): Observable<UspWebCertificacionesVolumenesPagoDetallesObtener[]> {
-  //  return this.select(state => state.certifications.id);
-  //}
+  getCheckedCategoryList(): Observable<SelectedIds[]> {
+    return this.select(state => state.checkedCategoryList);
+  }
 
   getUnCheckCategoryList(): Observable<SelectedIds[]> {
     return this.select(state => state.uncheckedCategoryList);
